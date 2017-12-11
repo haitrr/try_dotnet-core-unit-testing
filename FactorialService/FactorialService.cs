@@ -10,7 +10,7 @@ namespace Factorial.Services
             {
                 return 1;
             }
-            throw new NotImplementedException("This case is not implemented");
+            return Factorial(number - 1) * number;
         }
     }
 }
