@@ -6,6 +6,10 @@ namespace Factorial.Services
     {
         public int Factorial(int number)
         {
+            if (number < 0)
+            {
+                throw new NotSupportedException("Negative numbers are not supported");
+            }
             if (number < 2)
             {
                 return 1;
