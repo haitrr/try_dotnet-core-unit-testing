@@ -19,5 +19,15 @@ namespace Factorial.UnitTests.Services
             int result = _factorialService.Factorial(number);
             Assert.Equal(result, 1);
         }
+
+        [Fact]
+        public void TestFactorialOfNumberLessThan10()
+        {
+            Assert.Equal(_factorialService.Factorial(2), 2);
+            Assert.Equal(_factorialService.Factorial(3), 6);
+            Assert.Equal(_factorialService.Factorial(6), 720);
+            Assert.Equal(_factorialService.Factorial(7), 5040);
+            Assert.Equal(_factorialService.Factorial(9), 362880);
+        }
     }
 }
