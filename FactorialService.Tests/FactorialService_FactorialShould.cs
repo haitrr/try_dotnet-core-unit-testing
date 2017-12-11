@@ -29,5 +29,16 @@ namespace Factorial.UnitTests.Services
             Assert.Equal(_factorialService.Factorial(7), 5040);
             Assert.Equal(_factorialService.Factorial(9), 362880);
         }
+
+        [Fact]
+        public void TestWithNegativeNumber()
+        {
+            Random random = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                int number = random.Next(-9999, -1);
+                Assert.Throws<NotSupportedException>(() => _factorialService.Factorial(number));
+            }
+        }
     }
 }
