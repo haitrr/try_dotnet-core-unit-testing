@@ -6,7 +6,11 @@ namespace Factorial.Services
     {
         public int Factorial(int number)
         {
-            return -1;
+            if (number < 2)
+            {
+                return 1;
+            }
+            throw new NotImplementedException("This case is not implemented");
         }
     }
 }
